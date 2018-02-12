@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Semih Ozturk Hackathon</string>
+    <string name="app_name" translatable="false">Semih Öztürk Hackathon</string>
 
     <string name="filter">Filter</string>
     <string name="back">Back</string>
