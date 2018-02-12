@@ -74,53 +74,57 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Minimum Count" id="JnK-Um-UBp">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="162" id="bh8-wD-VQp">
-                                        <rect key="frame" x="0.0" y="491.5" width="375" height="162"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="63" id="bh8-wD-VQp">
+                                        <rect key="frame" x="0.0" y="491.5" width="375" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bh8-wD-VQp" id="fFC-5t-U0A">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="161.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="62.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBX-iz-9d3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cfC-3c-tF3">
+                                                    <rect key="frame" x="16" y="16" width="343" height="30.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <connections>
-                                                        <outlet property="dataSource" destination="sFw-13-e7P" id="zww-XA-9EC"/>
-                                                        <outlet property="delegate" destination="sFw-13-e7P" id="d7p-wP-4o6"/>
+                                                        <outlet property="delegate" destination="sFw-13-e7P" id="dpc-DK-rL5"/>
                                                     </connections>
-                                                </pickerView>
+                                                </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="eBX-iz-9d3" secondAttribute="trailing" id="1q1-Nr-aLB"/>
-                                                <constraint firstItem="eBX-iz-9d3" firstAttribute="leading" secondItem="fFC-5t-U0A" secondAttribute="leading" id="EBj-De-LoM"/>
-                                                <constraint firstAttribute="bottom" secondItem="eBX-iz-9d3" secondAttribute="bottom" constant="-0.5" id="Ovd-F6-cEx"/>
-                                                <constraint firstItem="eBX-iz-9d3" firstAttribute="top" secondItem="fFC-5t-U0A" secondAttribute="top" id="vj8-3W-aFj"/>
+                                                <constraint firstItem="cfC-3c-tF3" firstAttribute="leading" secondItem="fFC-5t-U0A" secondAttribute="leading" constant="16" id="2FI-If-b4E"/>
+                                                <constraint firstAttribute="bottom" secondItem="cfC-3c-tF3" secondAttribute="bottom" constant="16" id="ObQ-uN-ee1"/>
+                                                <constraint firstItem="cfC-3c-tF3" firstAttribute="top" secondItem="fFC-5t-U0A" secondAttribute="top" constant="16" id="Zpn-xG-tEM"/>
+                                                <constraint firstAttribute="trailing" secondItem="cfC-3c-tF3" secondAttribute="trailing" constant="16" id="qCf-6t-Pf4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Maximum Count" id="dIp-ku-XUz">
+                            <tableViewSection headerTitle="Maximum Count" id="F2g-dY-EM5">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="162" id="4kg-pp-Rb5">
-                                        <rect key="frame" x="0.0" y="709.5" width="375" height="162"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="63" id="TLJ-XI-yro">
+                                        <rect key="frame" x="0.0" y="610.5" width="375" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4kg-pp-Rb5" id="wCN-LY-tQ9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="161.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TLJ-XI-yro" id="ywE-Z5-9l8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="62.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQt-tA-V2Z">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p7i-Qt-uyw">
+                                                    <rect key="frame" x="16" y="16" width="343" height="30.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <connections>
-                                                        <outlet property="dataSource" destination="sFw-13-e7P" id="d3v-Om-Ify"/>
-                                                        <outlet property="delegate" destination="sFw-13-e7P" id="Iym-Jg-euq"/>
+                                                        <outlet property="delegate" destination="sFw-13-e7P" id="yaO-Bn-Goj"/>
                                                     </connections>
-                                                </pickerView>
+                                                </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="aQt-tA-V2Z" firstAttribute="top" secondItem="wCN-LY-tQ9" secondAttribute="top" id="Kag-8f-ueW"/>
-                                                <constraint firstItem="aQt-tA-V2Z" firstAttribute="leading" secondItem="wCN-LY-tQ9" secondAttribute="leading" id="XZD-kF-ef5"/>
-                                                <constraint firstAttribute="trailing" secondItem="aQt-tA-V2Z" secondAttribute="trailing" id="tIw-Nj-fea"/>
-                                                <constraint firstAttribute="bottom" secondItem="aQt-tA-V2Z" secondAttribute="bottom" constant="-0.5" id="xfK-Gl-TMf"/>
+                                                <constraint firstItem="p7i-Qt-uyw" firstAttribute="leading" secondItem="ywE-Z5-9l8" secondAttribute="leading" constant="16" id="9xz-Tg-dcr"/>
+                                                <constraint firstItem="p7i-Qt-uyw" firstAttribute="top" secondItem="ywE-Z5-9l8" secondAttribute="top" constant="16" id="Glw-nB-nuj"/>
+                                                <constraint firstAttribute="bottom" secondItem="p7i-Qt-uyw" secondAttribute="bottom" constant="16" id="ixv-Eh-zNV"/>
+                                                <constraint firstAttribute="trailing" secondItem="p7i-Qt-uyw" secondAttribute="trailing" constant="16" id="qay-JB-YU6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -141,14 +145,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="endDatePicker" destination="pX7-MB-G8l" id="KSZ-6v-FYe"/>
-                        <outlet property="maxCountPickerView" destination="aQt-tA-V2Z" id="ggg-je-cE2"/>
-                        <outlet property="minCountPickerView" destination="eBX-iz-9d3" id="VhN-9K-23j"/>
+                        <outlet property="maxCountTextField" destination="p7i-Qt-uyw" id="6E9-hT-wnI"/>
+                        <outlet property="minCountTextField" destination="cfC-3c-tF3" id="qOk-iC-lP6"/>
                         <outlet property="startDatePicker" destination="C2C-U5-E3N" id="Ig4-Kl-hM2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGH-0e-d0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2369" y="133"/>
+            <point key="canvasLocation" x="2368.8000000000002" y="132.68365817091455"/>
         </scene>
         <!--Search Records View Controller-->
         <scene sceneID="tne-QT-ifu">

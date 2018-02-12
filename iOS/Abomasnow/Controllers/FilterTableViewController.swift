@@ -19,16 +19,13 @@ class FilterTableViewController: UITableViewController {
     
     @IBOutlet weak var startDatePicker: UIDatePicker!
     @IBOutlet weak var endDatePicker: UIDatePicker!
-    @IBOutlet weak var minCountPickerView: UIPickerView!
-    @IBOutlet weak var maxCountPickerView: UIPickerView!
-    
-    fileprivate let minPickerValue = 2700
-    fileprivate let maxPickerValue = 3001
+    @IBOutlet weak var minCountTextField: UITextField!
+    @IBOutlet weak var maxCountTextField: UITextField!
     
     @IBAction func done(_ sender: UIBarButtonItem) {
-        if maxCountPickerView.selectedRow(inComponent: 0) > minCountPickerView.selectedRow(inComponent: 0) {
+        if Int(maxCountTextField.text!)! > Int(minCountTextField.text!)! {
             if endDatePicker.date > startDatePicker.date  {
-                updateFilter()
+                updateSearchRecords()
                 navigationController?.popViewController(animated: true)
             }
             else {
@@ -48,11 +45,11 @@ class FilterTableViewController: UITableViewController {
         }
     }
     
-    private func updateFilter() {
+    private func updateSearchRecords() {
         let startDate = dateFormatter.string(from: startDatePicker.date)
         let endDate = dateFormatter.string(from: endDatePicker.date)
-        let minCount = minCountPickerView.selectedRow(inComponent: 0) + minPickerValue
-        let maxCount = maxCountPickerView.selectedRow(inComponent: 0) + minPickerValue
+        let minCount = Int(minCountTextField.text!)!
+        let maxCount = Int(maxCountTextField.text!)!
         let filteredSearchRecordsRequest = SearchRecordsRequest(startDate: startDate, endDate: endDate, minCount: minCount, maxCount: maxCount)
         if searchRecordsRequest != filteredSearchRecordsRequest {
             self.delegate?.filter(updated: filteredSearchRecordsRequest)
@@ -61,14 +58,14 @@ class FilterTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configurePickers()
+        configureSearchRecords()
     }
     
-    private func configurePickers() {
+    private func configureSearchRecords() {
         if let searchRecordsRequest = searchRecordsRequest {
-            minCountPickerView.selectRow(searchRecordsRequest.minCount - minPickerValue, inComponent: 0, animated: false)
-            maxCountPickerView.selectRow(searchRecordsRequest.maxCount - minPickerValue, inComponent: 0, animated: false)
-            
+            minCountTextField.text = "\(searchRecordsRequest.minCount)"
+            maxCountTextField.text = "\(searchRecordsRequest.maxCount)"
+
             if let startDate = dateFormatter.date(from: searchRecordsRequest.startDate) {
                 startDatePicker.setDate(startDate, animated: false)
             }
@@ -80,31 +77,15 @@ class FilterTableViewController: UITableViewController {
 
 }
 
-extension FilterTableViewController: UIPickerViewDataSource {
+extension FilterTableViewController: UITextFieldDelegate {
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        if pickerView == minCountPickerView || pickerView == maxCountPickerView{
-            return 1
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string == " " {
+            return true
         }
-        return 0
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView == minCountPickerView || pickerView == maxCountPickerView{
-            return maxPickerValue - minPickerValue
-        }
-        return 0
-    }
-    
-}
-
-extension FilterTableViewController: UIPickerViewDelegate {
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == minCountPickerView || pickerView == maxCountPickerView{
-            return "\(minPickerValue + row)"
-        }
-        return ""
+        let invertedLetterCharacterSet = NSCharacterSet.letters.inverted
+        let letterFilteredString = (string.components(separatedBy: invertedLetterCharacterSet)).joined(separator: "")
+        return string != letterFilteredString
     }
     
 }
