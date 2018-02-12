@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.bilgehankalkan.semihozturkhackathon.FilterFragment"
+    tools:context="com.bilgehankalkan.semihozturkhackathon.ui.FilterFragment"
     android:layout_marginStart="40dp"
     android:layout_marginEnd="40dp">
     
@@ -32,12 +32,18 @@
             style="@style/FilterText"
             android:text="@string/min_count"/>
 
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
         <EditText
             android:id="@+id/edit_text_filter_min_count"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:text="@string/default_min_count"/>
+            android:text="@string/default_min_count"
+            android:layout_gravity="end"/>
     </LinearLayout>
 
     <LinearLayout
@@ -48,13 +54,20 @@
 
         <TextView
             style="@style/FilterText"
-            android:text="@string/max_count"/>
+            android:text="@string/max_count"
+            android:layout_gravity=""/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
 
         <EditText
             android:id="@+id/edit_text_filter_max_count"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:text="@string/default_max_count"/>
+            android:text="@string/default_max_count"
+            android:layout_gravity="end"/>
     </LinearLayout>
 </LinearLayout>
