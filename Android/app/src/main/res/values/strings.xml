@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name" translatable="false">Semih Öztürk Hackathon</string>
+
+    <string name="filter">Filter</string>
+    <string name="back">Back</string>
+
+    <string name="select_date_from">Start Date: %1$s</string>
+    <string name="select_date_to">End Date: %1$s</string>
+    <string name="max_count">Max Count:</string>
+    <string name="min_count">Min Count:</string>
+    <string name="done">Done</string>
+
+    <string name="default_min_count" translatable="false">2700</string>
+    <string name="default_max_count" translatable="false">3000</string>
+</resources>

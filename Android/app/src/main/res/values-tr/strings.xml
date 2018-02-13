@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filter">Filtre</string>
+    <string name="back">Geri</string>
+
+    <string name="select_date_from">Başlangıç Tarihi: %1$s</string>
+    <string name="select_date_to">Bitiş Tarihi: %1$s</string>
+    <string name="max_count">En Fazla:</string>
+    <string name="min_count">En Az:</string>
+    <string name="done">Tamam</string>
+</resources>

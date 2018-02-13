@@ -1,0 +1,21 @@
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+project 'Abomasnow.xcodeproj'
+
+def network
+
+pod 'Alamofire'
+pod 'AlamofireObjectMapper'
+pod 'ObjectMapper+Realm'
+pod 'RealmSwift'
+
+end
+
+target 'Abomasnow' do
+use_frameworks!
+platform :ios, '11.0'
+
+network
+
+end

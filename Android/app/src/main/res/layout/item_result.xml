@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_result_item">
+
+    <TextView
+        android:id="@+id/text_view_result_item_id"
+        style="@style/AppBarText"
+        android:maxLines="2"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/text_view_result_item_date"
+        style="@style/AppBarText"/>
+
+    <TextView
+        android:id="@+id/text_view_result_item_count"
+        style="@style/AppBarText"
+        android:layout_gravity="end"/>
+</LinearLayout>
